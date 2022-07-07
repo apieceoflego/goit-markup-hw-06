@@ -397,7 +397,7 @@
   <!-- Modal window -->
   <div class="backdrop is-hidden" data-modal>
     <div class="modal">
-      <button class="modal-close-btn" type="button" data-modal-close><svg width="18" height="18">
+      <button class="modal-close-btn" type="button" data-modal-close><svg class="close-btn" width="18" height="18">
           <use href="./images/SVG/icons.svg#close"></use>
         </svg></button>
 
@@ -405,26 +405,36 @@
         <div role="group" class="modal-form">
           <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
 
-          <div class="form-group"><label for="name">Имя</label>
-            <input type="text" name="name" id="name">
-          </div>
+          <label class="form-group">
+            <span class="modal-label">Имя</span>
+            <input class="modal-input" type="text" name="name">
+            <svg class="form-icon" width="18" height="18">
+              <use href="./images/SVG/icons.svg#person"></use>
+            </svg>
+          </label>
 
-          <div class="form-group">
-            <label for="tel">Телефон</label>
-            <input type="tel" name="tel" id="tel">
-          </div>
+          <label class="form-group">
+            <span class="modal-label">Телефон</span>
+            <input class="modal-input" type="tel" name="tel">
+            <svg class="form-icon" width="18" height="18">
+              <use href="./images/SVG/icons.svg#phone"></use>
+            </svg>
+          </label>
 
-          <div class="form-group">
-            <label for="email">Почта</label>
-            <input type="email" name="email" id="email">
-          </div>
+          <label class="form-group">
+            <span class="modal-label">Почта</span>
+            <input class="modal-input" type="email" name="email">
+            <svg class="form-icon" width="18" height="18">
+              <use href="./images/SVG/icons.svg#email"></use>
+            </svg>
+          </label>
 
-          <div class="form-group">
-            <label for="comment">Комментарий</label>
-            <textarea name="comment" id="comment" placeholder="Введите текст"></textarea>
-          </div>
+          <label class="form-group">
+            <span class="modal-label">Комментарий</span>
+            <textarea name="comment" placeholder="Введите текст"></textarea>
+          </label>
 
-          <div class="form-group policy">
+          <div class="form-policy">
             <input type="checkbox" name="policy" id="policy">
             <label for="policy">Соглашаюсь с рассылкой и принимаю <a href="#">Условия договора</a></label>
           </div>
