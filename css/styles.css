@@ -717,24 +717,22 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 0px;
-  border-radius: 4px;
+
   padding: 10px 10px 10px 29px;
   margin-left: 12px;
 
   color: var(--primery-bg-color);
-  font-family: 'Roboto', sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.9;
   letter-spacing: 0.06em;
 
   background-color: var(--accent-color);
+  border: 0px;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
   cursor: pointer;
-
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-send-btn {
@@ -824,18 +822,20 @@ body {
   padding: 0;
   width: 30px;
   height: 30px;
+  outline: transparent;
 
   cursor: pointer;
 
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   background-color: var(--primery-bg-color);
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn:hover,
 .modal-close-btn:focus {
   fill: var(--accent-color);
-  outline: none;
 }
 
 .modal-title {
@@ -877,15 +877,19 @@ body {
   border-radius: 4px;
   padding-left: 42px;
   outline: transparent;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-icon {
+.form-group .form-icon {
   position: absolute;
   top: 29px;
   left: 12px;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-group input:focus {
+.form-group .modal-input:focus {
   border: 1px solid #2196f3;
 }
 
@@ -894,7 +898,9 @@ body {
 }
 
 .form-policy {
-  margin-left: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 textarea {
@@ -907,6 +913,8 @@ textarea {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: transparent;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 textarea:focus {
@@ -923,4 +931,41 @@ label a {
   letter-spacing: 0.01em;
 
   color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-checkbox {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.modal-form-checkbox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 15px;
+
+  margin-right: 7px;
+
+  border: 2px solid var(--tittle-color);
+  border-radius: 3px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form-icon {
+  fill: var(--primery-bg-color);
+}
+
+.modal-checkbox:checked + .modal-form-checkbox {
+  background-color: var(--accent-color);
+  border: none;
 }
